@@ -37,8 +37,6 @@ exclude:
   - .sass-cache/
   - .jekyll-cache/
   - gemfiles/
-  - Gemfile
-  - Gemfile.lock
   - node_modules/
   - vendor/bundle/
   - vendor/cache/
@@ -47,8 +45,6 @@ exclude:
   # specific to the theme website:
   - bin/
   - lib/
-  - "*.gemspec"
-  - "*.gem"
   - LICENSE.txt
   - package.json
   - package-lock.json
