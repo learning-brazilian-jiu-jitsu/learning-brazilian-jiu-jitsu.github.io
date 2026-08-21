@@ -42,6 +42,10 @@ collections:
     title: Documentation
     permalink: /:path/
     output: true
+  test:
+    title: Test
+    permalink: /:path/
+    output: true
 
 defaults:
   -
