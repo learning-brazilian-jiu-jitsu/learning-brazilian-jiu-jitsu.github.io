@@ -22,6 +22,9 @@ theme: just-the-docs
 
 permalink: pretty
 
+plugins:
+  - jekyll-default-layout
+
 defaults:
   - scope:
       path: "docs" # an empty string here means all files in the project
