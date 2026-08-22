@@ -46,6 +46,10 @@ collections:
     title: Test
     permalink: /:path/
     output: true
+  etc:
+    title: ETC
+    permalink: /:path/
+    output: true
 
 defaults:
   -
