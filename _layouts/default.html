@@ -46,7 +46,7 @@
 				</ul>
 
 				<ul>
-					<h5>&nbsp;&nbsp;&nbsp;&nbsp;<b>Fundamentals</b></h5>
+					<h6>&nbsp;&nbsp;&nbsp;<b>Fundamentals</b></h6>
 					{% assign grouped = site.docs | group_by: 'category' %}
 					{% for group in grouped %}
 						<li class="nav-item top-level {% if group.name == page.category %}current{% endif %}">
@@ -63,6 +63,21 @@
 
 				<ul>
 					{% assign grouped = site.test | group_by: 'category' %}
+					{% for group in grouped %}
+						<li class="nav-item top-level {% if group.name == page.category %}current{% endif %}">
+							{% assign items = group.items | sort: 'order' %}
+							<a href="{{ site.baseurl }}{{ items.first.url }}">{{ group.name }}</a>
+							<ul>
+								{% for item in items %}
+									<li class="nav-item {% if item.url == page.url %}current{% endif %}"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></li>
+								{% endfor %}
+							</ul>
+						</li>
+					{% endfor %}
+				</ul>
+
+				<ul>
+					{% assign grouped = site.etc | group_by: 'category' %}
 					{% for group in grouped %}
 						<li class="nav-item top-level {% if group.name == page.category %}current{% endif %}">
 							{% assign items = group.items | sort: 'order' %}
