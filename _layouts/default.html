@@ -46,7 +46,7 @@
 				</ul>
 
 				<ul>
-					<h5><b>Fundamentals</b></h5>
+					&nbsp;&nbsp;&nbsp;&nbsp;<h5><b>Fundamentals</b></h5>
 					{% assign grouped = site.docs | group_by: 'category' %}
 					{% for group in grouped %}
 						<li class="nav-item top-level {% if group.name == page.category %}current{% endif %}">
